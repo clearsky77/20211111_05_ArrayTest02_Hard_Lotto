@@ -57,6 +57,29 @@ public class MainDrive {
 		}
 		
 		
+//		등수 확인
+		switch (correctCount) {
+		case 6:
+			System.out.println("1등!");
+			break;
+			
+		case 5:
+			System.out.println("3등!"); //임시로 3등으로 설정
+			break;
+			
+		case 4:
+			System.out.println("4등!");
+			break;
+			
+		case 3:
+			System.out.println("5등!");
+			break;
+			
+		default:
+			System.out.println("낙첨입니다.");
+			break;
+		}
+		
 		
 	}
 
