@@ -17,7 +17,6 @@ public class MainDrive {
 				
 				// 검사 1. 1~45 범위 맞는가? 결과 boolean으로 저장.
 				boolean isRangeOk = (1<= inputNum) && (inputNum <= 45);
-				
 				// 검사 2. 이미 입력한 숫자인가?
 				boolean isDuplOK = true;
 				
@@ -43,6 +42,12 @@ public class MainDrive {
 				}
 			}
 		}
+		
+//		6개 숫자 입력 완료됨.
+//		당첨번호 임시로 6개 직접 타이핑 (하드코딩) 
+
+		int[]  winLottoNumbers = { 2, 13, 20, 30, 31, 41 };
+		
 		
 	}
 
