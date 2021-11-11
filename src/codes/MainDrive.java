@@ -15,9 +15,22 @@ public class MainDrive {
 				System.out.print(i+1+"번째 숫자 입력 : ");
 				int inputNum = myScanner.nextInt();
 				
+				// 검사 1. 1~45 범위 맞는가? 결과 boolean으로 저장.
 				boolean isRangeOk = (1<= inputNum) && (inputNum <= 45);
 				
-				if( isRangeOk ) {
+				// 검사 2. 이미 입력한 숫자인가?
+				boolean isDuplOK = true;
+				
+				for(int num : myInputNumbers) {
+					// 중복 발견
+					if(num == inputNum) {
+						isDuplOK = false;
+					}
+				}
+				
+				
+				// 검사 1과 2가 괜찮으면
+				if( isRangeOk && isDuplOK) {
 					myInputNumbers[i] = inputNum;
 					break;
 				}else {
