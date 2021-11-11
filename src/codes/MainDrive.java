@@ -44,6 +44,7 @@ public class MainDrive {
 		}
 		
 //		6개 숫자 입력 완료됨.
+		System.out.println("-------------------------------");
 		
 //		당첨번호 랜덤
 		int[]  winLottoNumbers = new int[6];
@@ -70,7 +71,6 @@ public class MainDrive {
 				
 			}
 		}
-		
 		
 		
 		
@@ -109,9 +109,35 @@ public class MainDrive {
 
 		}
 		
+		
+		
+//		당첨 번호를 오름차순으로 정렬 (Bubble sort)
+		
+		for(int i=0; i<winLottoNumbers.length; i++) {
+			for(int j=0; j<winLottoNumbers.length-1; j++) {
+				if(winLottoNumbers[j] > winLottoNumbers[j+1]) {
+					int backUp =  winLottoNumbers[j];
+					winLottoNumbers[j] = winLottoNumbers[j+1];
+					winLottoNumbers[j+1] = backUp;
+				}
+			}
+			
+		}
+		
+		
+		
+//		당첨 번호, 보너스 번호 출력
+		System.out.println("-------------------------------");
+		for(int winNum : winLottoNumbers) {
+			System.out.println("당첨 번호: "+winNum);
+		}
 		System.out.println("보너스 번호 :"+bonusNum);
 		
 		
+		
+		
+		
+		System.out.println("-------------------------------");
 //		등수 확인
 		switch (correctCount) {
 		case 6:
