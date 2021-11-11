@@ -45,7 +45,7 @@ public class MainDrive {
 		
 //		6개 숫자 입력 완료됨.
 		
-//		당첨번호 임시로 6개 직접 타이핑 (하드코딩) 
+//		당첨번호 랜덤
 		int[]  winLottoNumbers = new int[6];
 		
 		for(int i=0; i<winLottoNumbers.length; i++) {
@@ -84,6 +84,32 @@ public class MainDrive {
 				}
 			}	
 		}
+		
+		
+		
+//		보너스 번호
+		int bonusNum = 0;
+
+		while (true) {
+			int randomNum = (int) (Math.random() * 45 + 1);
+			boolean isDuplOk = true;
+			
+			for ( int winNum  : winLottoNumbers ) {
+				if (randomNum == winNum) {
+//					중복 발견! -> 중복검사 탈락!
+					isDuplOk = false;
+				}
+			}
+
+//			검사 결과 true -> 보너스번호로 사용해도 됨.
+			if (isDuplOk) {
+				bonusNum = randomNum;
+				break; // 보너스번호 추첨 종료
+			}
+
+		}
+		
+		System.out.println("보너스 번호 :"+bonusNum);
 		
 		
 //		등수 확인
