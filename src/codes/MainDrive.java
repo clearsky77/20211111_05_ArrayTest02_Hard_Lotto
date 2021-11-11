@@ -10,10 +10,15 @@ public class MainDrive {
 		int[] myInputNumbers = new int[6];
 		
 		for(int i=0; i<myInputNumbers.length; i++) {
-			System.out.print(i+1+"번째 숫자 입력 : ");
-			int inputNum = myScanner.nextInt();
-			myInputNumbers[i] = inputNum;
 			
+			while(true) {
+				System.out.print(i+1+"번째 숫자 입력 : ");
+				int inputNum = myScanner.nextInt();
+				
+				if( inputNum>0 || inputNum<10 ) {
+					myInputNumbers[i] = inputNum;
+				}
+			}
 		}
 		
 	}
