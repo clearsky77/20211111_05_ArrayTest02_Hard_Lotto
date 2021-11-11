@@ -15,8 +15,13 @@ public class MainDrive {
 				System.out.print(i+1+"번째 숫자 입력 : ");
 				int inputNum = myScanner.nextInt();
 				
-				if( inputNum>0 || inputNum<10 ) {
+				boolean isRangeOk = (1<= inputNum) && (inputNum <= 45);
+				
+				if( isRangeOk ) {
 					myInputNumbers[i] = inputNum;
+					break;
+				}else {
+					System.out.println("잘못된 숫자를 입력했습니다. 다시 입력해주세요.");
 				}
 			}
 		}
