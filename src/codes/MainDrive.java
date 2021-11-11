@@ -53,9 +53,19 @@ public class MainDrive {
 				int randomNum = (int)(Math.random()*45+1);
 				System.out.println("랜덤 숫자: "+randomNum);
 				
-				// 임시 - 무조건 사용
-				if(true) {
+				boolean isDuplOk = true;
+				
+				// 이미 뽑은 번호와 중복인지 확인
+				for(int winNum : winLottoNumbers) {
+					if(winNum == randomNum) { // 중복이 있었다면
+						isDuplOk = false;
+					}
+				}
+				
+				// 중복이 있나
+				if(isDuplOk) { // 중복이 없으면 for문 탈출
 					winLottoNumbers[i] = randomNum;
+					break;
 				}
 				
 			}
