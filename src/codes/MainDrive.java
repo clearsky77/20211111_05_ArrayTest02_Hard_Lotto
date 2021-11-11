@@ -119,7 +119,18 @@ public class MainDrive {
 			break;
 			
 		case 5:
-			System.out.println("3등!"); //임시로 3등으로 설정
+			boolean isBonusCreect = false;
+			for(int myNum : myInputNumbers) {
+				if(bonusNum == myNum) {
+					isBonusCreect = true;
+				}
+			}
+			
+			if(isBonusCreect) {
+				System.out.println("2등!"); //임시로 3등으로 설정
+			}else {
+				System.out.println("3등!"); //임시로 3등으로 설정
+			}
 			break;
 			
 		case 4:
